@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-image: url("/backend/images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      form {
+        backdrop-filter: blur(10px);
+        background: #88bdc94f;
+      }
+
+      form label {
+        margin-right: 20px;
+      }
+    </style>
+    <title>Add</title>
+  </head>
+  <body>
+    <div class="container h-screen w-screen">
+      <div
+        class="head text-black h-[10vh] flex items-center justify-center shadow-lg"
+      >
+        <h2 class="text-3xl font-semibold text-emerald-500">
+          Start adding products
+        </h2>
+      </div>
+      <h1
+        class="text-3xl ml-20 mt-2 cursor-pointer font-semibold text-emerald-500"
+      >
+        <a href="/">Home</a>
+      </h1>
+      <div
+        class="inputSection flex flex-col items-center h-[80vh] flex items-center justify-center"
+      >
+        <form
+          action="/add"
+          method="post"
+          enctype="multipart/form-data"
+          class="px-[40px] py-[20px] rounded-xl flex flex-col gap-6"
+        >
+          <div class="name flex items-center text-2xl">
+            <label for="name">Name:</label>
+            <input
+              required
+              class="text-black flex-1 px-4 py-2 outline-none rounded-xl text-2xl"
+              type="text"
+              name="name"
+              id="name"
+            />
+          </div>
+          <div class="price flex items-center text-2xl">
+            <label for="price">Price(rs.):</label>
+            <input
+              required
+              class="text-black flex-1 px-4 py-2 outline-none rounded-xl text-2xl"
+              type="number"
+              name="price"
+              id="price"
+            />
+          </div>
+          <div class="image flex text-2xl">
+            <label for="image">Image:</label>
+            <input
+              required
+              class="text-black"
+              type="file"
+              name="image"
+              id="image"
+            />
+          </div>
+          <div class="description flex items-center text-2xl">
+            <label for="description">Description:</label>
+            <textarea
+              class="text-black flex-1 px-4 py-2 outline-none rounded-xl text-2xl"
+              name="description"
+              id="description"
+              cols="30"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="button flex justify-center text-2xl">
+            <input
+              type="submit"
+              value="Add"
+              class="px-4 py-2 bg-[#88bdc9] text-black rounded-xl"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
