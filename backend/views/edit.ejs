@@ -73,6 +73,29 @@
               id="price"
             />
           </div>
+
+          <div class="price flex items-center text-2xl">
+            <label for="price">Category:</label>
+            <input
+              required
+              class="text-black flex-1 px-4 py-2 outline-none rounded-xl text-2xl"
+              value="<%= item.category %>"
+              type="text"
+              name="category"
+              id="category"
+            />
+          </div>
+          <div class="price flex items-center text-2xl">
+            <label for="price">Stock:</label>
+            <input
+              required
+              class="text-black flex-1 px-4 py-2 outline-none rounded-xl text-2xl"
+              value="<%= item.stock %>"
+              type="number"
+              name="stock"
+              id="stock"
+            />
+          </div>
           <!-- <div class="image flex text-2xl">
             <label for="image">Image:</label>
             <input

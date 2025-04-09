@@ -17,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/view" element={<ViewPage />}></Route>
+        <Route path="/view" element={<ViewPage />}></Route>
       </Routes>
     </div>
   );
