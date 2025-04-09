@@ -1,12 +1,13 @@
 import { Moon, ShoppingCart, Sun, UserRound } from "lucide-react";
 import React, { useState } from "react";
-import { useThemeStore } from "../store/useThemeStore";
+import { useThemeStore } from "../store/useThemeStore.js";
 import { Link } from "react-router-dom";
+import useAuthStore from "../store/useAuthStore.js";
 
 const Navbar = () => {
   const [count, setCount] = useState(0);
   const { theme, setTheme } = useThemeStore();
-
+  const { logout, authUser } = useAuthStore();
   const themeHandler = () => {
     setTheme(theme === "dim" ? "cmyk" : "dim");
   };
@@ -15,7 +16,7 @@ const Navbar = () => {
       {/* left side */}
       <div className="flex-1">
         <Link to="/">
-          <a className="btn btn-ghost text-xl">Sound Rise</a>
+          <span className="btn btn-ghost text-xl">Sound Rise</span>
         </Link>
       </div>
 
@@ -34,17 +35,13 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
+            {authUser?.isAdmin && (
+              <li>
+                <button className="justify-between">Admin Panel</button>
+              </li>
+            )}
+            <li onClick={logout}>
+              <button>Logout</button>
             </li>
           </ul>
         </div>

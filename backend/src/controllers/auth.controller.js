@@ -31,8 +31,8 @@ export const signup = async (req, res) => {
     });
 
     if (newUser) {
-      // generate jwt tokenq
       await newUser.save();
+      // generate jwt token
       generateToken(newUser._id, res);
       res.status(201).json({
         _id: newUser._id,
@@ -88,6 +88,15 @@ export const logout = (req, res) => {
     return res.status(200).json({ message: "Logged Out Successfully" });
   } catch (error) {
     console.log("Error in logout controller", error.message);
+    return res.status(500).json({ message: "Internal Server error" });
+  }
+};
+
+export const checkAuth = (req, res) => {
+  try {
+    res.status(200).json(req.user);
+  } catch (error) {
+    console.log("Error in checkAuth controller", error.message);
     return res.status(500).json({ message: "Internal Server error" });
   }
 };
