@@ -37,7 +37,9 @@ const Navbar = () => {
           >
             {authUser?.isAdmin && (
               <li>
-                <button className="justify-between">Admin Panel</button>
+                <button className="justify-between">
+                  <Link to="/admin">Admin Panel</Link>
+                </button>
               </li>
             )}
             <li onClick={logout}>

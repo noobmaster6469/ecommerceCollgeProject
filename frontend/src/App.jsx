@@ -9,16 +9,16 @@ import LoginPage from "./pages/LoginPage";
 import useAuthStore from "./store/useAuthStore";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
+import ProductPage from "./pages/ProductPage";
+import AdminPage from "./pages/AdminPage";
 
 const App = () => {
   const { theme, setTheme } = useThemeStore();
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, isAdmin } = useAuthStore();
   useEffect(() => {
     setTheme("dim");
     checkAuth();
   }, [setTheme, checkAuth]);
-
-  console.log(authUser);
 
   if (isCheckingAuth && !authUser) {
     return (
@@ -46,6 +46,18 @@ const App = () => {
         <Route
           path="/login"
           element={!authUser ? <LoginPage /> : <Navigate to="/" />}
+        ></Route>
+        <Route
+          path="/product/:category"
+          element={authUser ? <ProductPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/product"
+          element={authUser ? <ProductPage /> : <Navigate to="/login" />}
+        ></Route>
+        <Route
+          path="/admin"
+          element={authUser && isAdmin ? <AdminPage /> : <Navigate to="/" />}
         ></Route>
       </Routes>
       <Toaster />

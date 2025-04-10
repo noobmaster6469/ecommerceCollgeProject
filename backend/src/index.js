@@ -1,5 +1,6 @@
 import express from "express";
 import authRoute from "./routes/auth.route.js";
+import productRoute from "./routes/products.route.js";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -20,6 +21,7 @@ app.use(
 );
 
 app.use("/api/auth", authRoute);
+app.use("/api/product", productRoute);
 
 const port = process.env.PORT;
 
