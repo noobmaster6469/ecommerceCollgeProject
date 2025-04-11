@@ -11,6 +11,9 @@ import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 import ProductPage from "./pages/ProductPage";
 import AdminPage from "./pages/AdminPage";
+import EditPage from "./pages/EditPage";
+import DeletePage from "./pages/DeletePage";
+import AddPage from "./pages/AddPage";
 
 const App = () => {
   const { theme, setTheme } = useThemeStore();
@@ -58,6 +61,18 @@ const App = () => {
         <Route
           path="/admin"
           element={authUser && isAdmin ? <AdminPage /> : <Navigate to="/" />}
+        ></Route>
+        <Route
+          path="/edit/:id"
+          element={authUser && isAdmin ? <EditPage /> : <Navigate to="/" />}
+        ></Route>
+        <Route
+          path="/delete/:id"
+          element={authUser && isAdmin ? <DeletePage /> : <Navigate to="/" />}
+        ></Route>
+        <Route
+          path="/add"
+          element={authUser && isAdmin ? <AddPage /> : <Navigate to="/" />}
         ></Route>
       </Routes>
       <Toaster />

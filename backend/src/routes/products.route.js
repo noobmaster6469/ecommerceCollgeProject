@@ -3,36 +3,23 @@ import express from "express";
 const router = express.Router();
 
 import { protectRoute } from "../middlewares/auth.middleware.js";
-import { getAllProducts } from "../controllers/product.controller.js";
+import {
+  getProducts,
+  getProduct,
+  addProduct,
+  deleteProduct,
+  editProduct,
+} from "../controllers/product.controller.js";
+import upload from "../config/multerconfig.js";
 
-router.post("/getAll", protectRoute, getAllProducts);
+router.post("/get", protectRoute, getProducts);
 
-router.post("/getString", protectRoute, (req, res) => {
-  res.send("String");
-});
+router.post("/get/:id", getProduct);
 
-router.post("/getPercussion", protectRoute, (req, res) => {
-  res.send("Percussion");
-});
+router.delete("/delete/:id", deleteProduct);
 
-router.post("/getKeyboard", protectRoute, (req, res) => {
-  res.send("Keyboard");
-});
+router.put("/edit/:id", editProduct);
 
-router.post("/getWind", protectRoute, (req, res) => {
-  res.send("Wind");
-});
-
-router.post("/getOrchestral", protectRoute, (req, res) => {
-  res.send("Orchestral");
-});
-
-router.post("/getElectronic", protectRoute, (req, res) => {
-  res.send("Electronic");
-});
-
-router.post("/getAccessories", protectRoute, (req, res) => {
-  res.send("Accessories");
-});
+router.post("/add", upload.single("image"), addProduct);
 
 export default router;

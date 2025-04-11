@@ -16,7 +16,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1588690224648-20426ab6274a?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 299.99,
-    category: "String Instruments",
+    category: "String",
     stock: 18,
   },
   {
@@ -25,7 +25,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1568193755668-aae18714a9f1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 499.99,
-    category: "String Instruments",
+    category: "String",
     stock: 12,
   },
   {
@@ -34,7 +34,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1627919617040-281311750887?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEtleWJvYXJkJTIwbXVzaWN8ZW58MHx8MHx8fDA%3D",
     price: 349.99,
-    category: "Keyboard Instruments",
+    category: "Keyboard",
     stock: 6,
   },
   {
@@ -43,7 +43,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: 599.99,
-    category: "Percussion Instruments",
+    category: "Percussion",
     stock: 15,
   },
   {
@@ -52,7 +52,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1624367171718-14026220ee35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFZpb2xpbnxlbnwwfHwwfHx8MA%3D%3D",
     price: 199.99,
-    category: "Orchestral Instruments",
+    category: "Orchestral",
     stock: 10,
   },
   {
@@ -61,7 +61,7 @@ const seedProducts = [
     image:
       "https://plus.unsplash.com/premium_photo-1679826780221-4dc34657fdb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VHJ1bXBldHxlbnwwfHwwfHx8MA%3D%3D",
     price: 149.99,
-    category: "Wind Instruments",
+    category: "Wind",
     stock: 19,
   },
   {
@@ -70,7 +70,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1598367772323-3ae346826817?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2F4b3Bob25lfGVufDB8fDB8fHww",
     price: 399.99,
-    category: "Wind Instruments",
+    category: "Wind",
     stock: 8,
   },
   {
@@ -79,7 +79,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1541447554742-4b7eff548fe1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VWt1bGVsZXxlbnwwfHwwfHx8MA%3D%3D",
     price: 89.99,
-    category: "String Instruments",
+    category: "String",
     stock: 16,
   },
   {
@@ -88,7 +88,7 @@ const seedProducts = [
     image:
       "https://plus.unsplash.com/premium_photo-1664457233868-d2a40c759998?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8REolMjBNaXhlcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 249.99,
-    category: "Electronic & Studio Gear",
+    category: "Accessories",
     stock: 13,
   },
   {
@@ -115,7 +115,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1619558041249-0523903712e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QmFzcyUyMEd1aXRhcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 329.99,
-    category: "String Instruments",
+    category: "String",
     stock: 7,
   },
   {
@@ -124,7 +124,7 @@ const seedProducts = [
     image:
       "https://media.istockphoto.com/id/176961720/photo/drawer.webp?a=1&b=1&s=612x612&w=0&k=20&c=5thwyjhH-hLiVOEMN5pyUBXTRe_RZuDsLf44_9h2s4c=",
     price: 129.99,
-    category: "Percussion Instruments",
+    category: "Percussion",
     stock: 14,
   },
   {
@@ -133,7 +133,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1580719653258-26873fde0b4d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zmx1dGV8ZW58MHx8MHx8fDA%3D",
     price: 59.99,
-    category: "Wind Instruments",
+    category: "Wind",
     stock: 11,
   },
   {
@@ -142,7 +142,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1555026403-6a01001f73ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SGFybW9uaWNhfGVufDB8fDB8fHww",
     price: 49.99,
-    category: "Wind Instruments",
+    category: "Wind",
     stock: 9,
   },
   {
@@ -151,7 +151,7 @@ const seedProducts = [
     image:
       "https://images.unsplash.com/photo-1643901180465-59cce567ec2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGVyY3Vzc2lvbiUyMFBhZHxlbnwwfHwwfHx8MA%3D%3D",
     price: 279.99,
-    category: "Electronic & Studio Gear",
+    category: "Accessories",
     stock: 6,
   },
 ];
