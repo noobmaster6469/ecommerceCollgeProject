@@ -1,8 +1,6 @@
 import { create } from "zustand";
 import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
-import { get } from "mongoose";
-import { getProducts } from "../../../backend/src/controllers/product.controller.js";
 
 export const useProductStore = create((set) => ({
   items: [],
